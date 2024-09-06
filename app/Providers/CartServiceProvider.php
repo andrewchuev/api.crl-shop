@@ -23,10 +23,7 @@ class CartServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // Подключение маршрутов для корзины
-        $this->loadRoutesFrom(__DIR__.'/../Modules/Cart/routes/api.php');
-
-        // Подключение миграций для корзины
-        $this->loadMigrationsFrom(__DIR__.'/../Modules/Cart/migrations');
+        $this->loadRoutesFrom(__DIR__ . '/../Modules/Cart/routes/api.php');
+        $this->loadMigrationsFrom(__DIR__ . '/../Modules/Cart/migrations');
     }
 }

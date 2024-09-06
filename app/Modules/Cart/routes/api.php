@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\CartController;
+
+use App\Modules\Cart\Http\Controllers\CartController;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('cart', [CartController::class, 'index']);

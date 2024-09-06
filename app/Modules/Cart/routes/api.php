@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\CartController;
 
 Route::middleware('auth:sanctum')->group(function () {

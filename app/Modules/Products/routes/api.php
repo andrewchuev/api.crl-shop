@@ -1,4 +1,5 @@
 <?php
+
 // routes/api.php
 
 use App\Modules\Products\Http\Controllers\ProductController;

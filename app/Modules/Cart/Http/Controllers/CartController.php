@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Modules\Cart\Models\Cart;
@@ -10,6 +11,7 @@ class CartController extends Controller
     {
         $userId = $request->user()->id;
         $cartItems = Cart::where('user_id', $userId)->with('product')->get();
+
         return response()->json($cartItems);
     }
 

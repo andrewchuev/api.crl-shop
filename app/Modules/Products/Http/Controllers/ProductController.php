@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Products\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -27,12 +28,14 @@ class ProductController extends Controller
     public function filter(Request $request)
     {
         $filters = $request->only(['category', 'price_range']);
+
         return response()->json($this->productService->filterProducts($filters));
     }
 
     public function search(Request $request)
     {
         $keyword = $request->input('keyword');
+
         return response()->json($this->productService->searchProducts($keyword));
     }
 }

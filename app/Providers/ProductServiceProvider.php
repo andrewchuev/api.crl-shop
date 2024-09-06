@@ -15,7 +15,7 @@ class ProductServiceProvider extends ServiceProvider
     {
         $this->app->bind('ProductService', function ($app) {
             return new ProductService(
-                new ProductRepository()
+                new ProductRepository
             );
         });
     }
@@ -25,6 +25,6 @@ class ProductServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__ . '/../Modules/Products/routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/../Modules/Products/routes/api.php');
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Products\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -6,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'name', 'description', 'price', 'stock', 'category_id', 'image'
+        'name', 'description', 'price', 'stock', 'category_id', 'image',
     ];
 
     public function category()

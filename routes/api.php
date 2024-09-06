@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
-use Illuminate\Auth\Middleware\Authenticate;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {

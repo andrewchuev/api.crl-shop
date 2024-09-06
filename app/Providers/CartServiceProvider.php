@@ -16,7 +16,7 @@ class CartServiceProvider extends ServiceProvider
         // Регистрация сервисов или репозиториев корзины
         $this->app->bind('CartService', function ($app) {
             return new CartService(
-                new CartRepository()
+                new CartRepository
             );
         });
     }
@@ -24,9 +24,9 @@ class CartServiceProvider extends ServiceProvider
     public function boot()
     {
         // Подключение маршрутов для корзины
-        $this->loadRoutesFrom(__DIR__ . '/../Modules/Cart/routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/../Modules/Cart/routes/api.php');
 
         // Подключение миграций для корзины
-        $this->loadMigrationsFrom(__DIR__ . '/../Modules/Cart/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../Modules/Cart/migrations');
     }
 }

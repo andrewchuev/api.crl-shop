@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Products\Repositories;
 
 use App\Modules\Products\Models\Product;

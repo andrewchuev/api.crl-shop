@@ -2,10 +2,13 @@
 
 namespace App\Modules\Products\Models;
 
+use App\Modules\Products\database\factories\ProductFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'name', 'description', 'price', 'stock', 'category_id', 'image',
     ];
@@ -13,5 +16,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    protected static function newFactory()
+    {
+        return ProductFactory::new();
     }
 }

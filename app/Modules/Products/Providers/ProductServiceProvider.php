@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Modules\Products\Providers;
 
 use App\Modules\Products\Repositories\ProductRepository;
 use App\Modules\Products\Services\ProductService;
@@ -25,6 +25,6 @@ class ProductServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../Modules/Products/routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
     }
 }

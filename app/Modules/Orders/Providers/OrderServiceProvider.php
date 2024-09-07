@@ -9,11 +9,11 @@ class OrderServiceProvider extends ServiceProvider
     public function register()
     {
         // Регистрация сервисов или репозиториев для заказов (если нужно)
-        $this->app->bind('OrderService', function ($app) {
-            return new \App\Modules\Orders\Services\OrderService(
-                new \App\Modules\Orders\Repositories\OrderRepository()
+        /*$this->app->bind('OrderService', function ($app) {
+            return new App\Modules\Orders\Services\OrderService(
+                new OrderRepository()
             );
-        });
+        });*/
     }
 
     public function boot()
@@ -22,6 +22,6 @@ class OrderServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
 
         // Подключение миграций для заказов
-        $this->loadMigrationsFrom(__DIR__ . '/../migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 }
